@@ -1,4 +1,6 @@
+
 import { Component } from '@angular/core';
+import { LayoutServiceService } from './services/layout-service.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ent-jobapp';
+  
+  constructor(public layout: LayoutServiceService){}
+  
 }

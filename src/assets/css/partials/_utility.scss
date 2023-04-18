@@ -1,0 +1,33 @@
+@use '@angular/material' as mat;
+
+@mixin utility-mixin($theme) {
+    
+    
+    $foreground: map-get($theme, foreground);
+    $background: map-get($theme, background);
+
+    .primary{
+        color: mat.get-color-from-palette($primary);
+    }
+    
+    .accent{
+        color: mat.get-color-from-palette($accent);
+    }
+    
+    .warn{
+        color: mat.get-color-from-palette($warn);
+    }
+    
+    .bg{
+        background-color: mat.get-color-from-palette($foreground, 'text');
+    }
+    
+    .text-light{
+        color: mat.get-color-from-palette($background, 'background');
+    }
+
+    .sh-custom{
+        @include mat.elevation(20, #e91e63, 0.9)
+    }
+
+}
